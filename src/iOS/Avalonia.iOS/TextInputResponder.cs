@@ -187,6 +187,10 @@ partial class AvaloniaView
                     case UIReturnKeyType.Search:
                         ResignFirstResponder();
                         break;
+                    case UIReturnKeyType.Next:
+                        var focusedElement = _view.InputRoot.FocusManager.GetFocusedElement();
+                        _view.InputRoot.KeyboardNavigationHandler.Move(focusedElement, NavigationDirection.Next);
+                        break;
                 }
                 return;
             }
