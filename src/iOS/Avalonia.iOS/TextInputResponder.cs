@@ -188,7 +188,7 @@ partial class AvaloniaView
                         ResignFirstResponder();
                         break;
                     case UIReturnKeyType.Next:
-                        var focusedElement = _view.InputRoot.FocusManager.GetFocusedElement();
+                        var focusedElement = _view.InputRoot.FocusManager?.GetFocusedElement();
                         _view.InputRoot.KeyboardNavigationHandler.Move(focusedElement, NavigationDirection.Next);
                         break;
                 }

@@ -626,7 +626,7 @@ namespace Avalonia.Android.Platform.SkiaPlatform
                     }
                 case ImeAction.Next:
                 {
-                    var focusedElement = _toplevel.InputRoot.FocusManager.GetFocusedElement();
+                    var focusedElement = _toplevel.InputRoot.FocusManager?.GetFocusedElement();
                     _toplevel.InputRoot.KeyboardNavigationHandler.Move(focusedElement, NavigationDirection.Next);
                     break;
                 }
